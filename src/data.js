@@ -1,0 +1,204 @@
+import WhiteSeat from "./images/Seat.svg"
+
+export const data =[
+    {
+        id:"C1",
+        images:WhiteSeat,
+        price:220
+    },
+{
+    id:"C2",
+    images:WhiteSeat,
+    price:220
+},
+{
+    id:"C3",
+    images:WhiteSeat,
+    price:220
+},
+{
+    id:"C4",
+    images:WhiteSeat,
+    price:220
+},
+{
+    id:"C5",
+    images:WhiteSeat,
+    price:220
+},
+{
+    id:"C6",
+    images:WhiteSeat,
+    price:220
+},
+{
+    id:"C7",
+    images:WhiteSeat,
+    price:220
+},
+{
+    id:"C8",
+    images:WhiteSeat,
+    price:220
+},
+{
+    id:"C9",
+    images:WhiteSeat,
+    price:220
+},
+{
+    id:"C10",
+    images:WhiteSeat,
+    price:220
+},
+{
+    id:"C11",
+    images:WhiteSeat,
+    price:220
+},
+{
+id:"C12",
+images:WhiteSeat,
+price:220
+},
+{
+id:"C13",
+images:WhiteSeat,
+price:220
+},
+{
+id:"C14",
+images:WhiteSeat,
+price:220
+},
+{
+id:"C15",
+images:WhiteSeat,
+price:220
+},
+{
+id:"C16",
+images:WhiteSeat,
+price:220
+},
+{
+id:"C17",
+images:WhiteSeat,
+price:220
+},
+{
+id:"C18",
+images:WhiteSeat,
+price:220
+},
+{
+id:"C19",
+images:WhiteSeat,
+price:220
+},
+{
+id:"C20",
+images:WhiteSeat,
+price:220
+},
+{
+    id:"C21",
+    images:WhiteSeat,
+    price:220
+},
+{
+id:"C22",
+images:WhiteSeat,
+price:220
+},
+{
+id:"C23",
+images:WhiteSeat,
+price:220
+},
+{
+id:"C24",
+images:WhiteSeat,
+price:220
+},
+{
+id:"C25",
+images:WhiteSeat,
+price:220
+},
+{
+id:"C26",
+images:WhiteSeat,
+price:220
+},
+{
+id:"C27",
+images:WhiteSeat,
+price:220
+},
+{
+id:"C28",
+images:WhiteSeat,
+price:220
+},
+{
+id:"C29",
+images:WhiteSeat,
+price:220
+},
+{
+id:"C30",
+images:WhiteSeat,
+price:220
+},
+{
+    id:"C31",
+    images:WhiteSeat,
+    price:220
+},
+{
+id:"C32",
+images:WhiteSeat,
+price:220
+},
+{
+id:"C33",
+images:WhiteSeat,
+price:220
+},
+{
+id:"C34",
+images:WhiteSeat,
+price:220
+},
+{
+id:"C35",
+images:WhiteSeat,
+price:220
+},
+{
+id:"C36",
+images:WhiteSeat,
+price:220
+},
+{
+id:"C37",
+images:WhiteSeat,
+price:220
+},
+{
+id:"C38",
+images:WhiteSeat,
+price:220
+},
+{
+id:"C39",
+images:WhiteSeat,
+price:220
+},
+{
+id:"C40",
+images:WhiteSeat,
+price:220
+},
+]

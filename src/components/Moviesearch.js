@@ -1,17 +1,19 @@
-import React from 'react'
-import {Form} from '../Search.styled'
+import React from "react";
+import { Form } from "../Search.styled";
 
-const Moviesearch = (props) => {
+const Moviesearch = ({ searchInput, changeHandler, handleSubmit }) => {
   return (
-    <Form className="form">
-    <input type="text" 
-    className="inputsearch" 
-    placeholder="search"
-    onchange={(e)=>props.searchItems(e.target.value)}
-    />
-    <i className="fa-solid fa-magnifying-glass"></i>
-  </Form>
-  )
-}
+    <Form className="form" onSubmit={handleSubmit}>
+      <input
+        type="text"
+        className="inputsearch"
+        placeholder="search"
+        value={searchInput}
+        onChange={changeHandler}
+      />
+      <i className="fa-solid fa-magnifying-glass"></i>
+    </Form>
+  );
+};
 
-export default Moviesearch
+export default Moviesearch;

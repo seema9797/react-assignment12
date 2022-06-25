@@ -7,19 +7,21 @@ import ConfirmBook from './components/ConfirmBook';
 
 import Movie from'./Movie'
 
+
+import {GlobalProvider} from './context/GlobalState'
 function App() {
  
   return (
-  <div>
+  <GlobalProvider>
 <Router>
       <Switch>
-        <Route exact path="/ConfirmBook">
+        <Route  path="/ConfirmBook">
            <ConfirmBook />
         </Route>
-       <Route exact path="/bookseat">
+       <Route  path="/bookseat">
            <BookSeaat/>
         </Route>
-        <Route exact path="/Moviesearch">
+        <Route  path="/Moviesearch">
            <Moviesearch/>
         </Route>
        <Route exact path="/">
@@ -27,7 +29,7 @@ function App() {
         </Route>
       </Switch>
     </Router>
-  </div>
+  </GlobalProvider>
 
   );
 }
