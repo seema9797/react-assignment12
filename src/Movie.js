@@ -45,10 +45,6 @@ const Movie = () =>{
       setsearchInput(e.target.value)
     }
 
-     const click=()=>{
-       localStorage.setItem('movies',JSON.stringify(movies))
-    }
-
    
     return (
       <div>
@@ -64,19 +60,11 @@ const Movie = () =>{
 
           <div className="displayimages">
             {movies.length > 0 ? (
-              movies
-                //  .filter((index)=>{
-                //   if(searchInput ==""){
-                //     return index
-                //   }else if(index.title.toLowerCase().includes(searchInput.toLowerCase())){
-                //     return index
-                //   }
-                // })
-                .map((index) => (
+              movies.map((index) => (
                   <div className="container" key={index.id}>
                     <div className="cardSub">
                       <h3 className="movietitle">{index.title}</h3>
-                      <Link to="/bookseat">
+                      <Link to='/bookseat'>
                         <button
                           onClick={() => addMovieToCardBook(index)}
                           className="btnSeeMore"

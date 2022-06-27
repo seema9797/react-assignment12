@@ -1,6 +1,5 @@
-import {useEffect,useState} from 'react';
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.css';
+
 import Moviesearch from'./components/Moviesearch'
 import BookSeaat from'./components/BookSeaat';
 import ConfirmBook from './components/ConfirmBook';
