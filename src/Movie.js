@@ -1,6 +1,6 @@
 import { useEffect, useState, useContext } from 'react';
 import { GlobalContext } from './context/GlobalState';
-import Moviesearch from'./components/Moviesearch'
+import MovieSearch from'./components/MovieSearch'
 import {DisplayImg} from'./Search.styled'
 import { Link } from "react-router-dom";
 import NotFond from './images/notfound.png'
@@ -18,7 +18,7 @@ const API_SEARCH ="https://api.themoviedb.org/3/search/movie?api_key=16f5a397146
 
 const Movie = () =>{
     const [movies, setMovies] = useState([]);
-    const[searchInput,setsearchInput] = useState("");
+    const[searchInput,setSearchInput] = useState("");
     const { addMovieToCardBook } = useContext(GlobalContext);
   
     useEffect(()=>{
@@ -33,16 +33,25 @@ const Movie = () =>{
     const handleSubmit=(e)=>{
       e.preventDefault();
 
-      fetch(API_SEARCH + searchInput)
-        .then((res) => res.json())
-        .then((data) => {
-          setMovies(data.results)
-        });
+      if (searchInput) {
+        fetch(API_SEARCH + searchInput)
+          .then((res) => res.json())
+          .then((data) => {
+            setMovies(data.results);
+          });
+      } else {
+            fetch(API_URL)
+              .then((res) => res.json())
+              .then((data) => {
+                setMovies(data.results);
+                console.log(data.results);
+              });
+     }
       
     }
 
     const changeHandler=(e)=>{
-      setsearchInput(e.target.value)
+      setSearchInput(e.target.value)
     }
 
    
@@ -52,7 +61,7 @@ const Movie = () =>{
           <div className="BookHeader">
             <h1>Book Tickets</h1>
           </div>
-          <Moviesearch
+          <MovieSearch
             changeHandler={changeHandler}
             searchInput={searchInput}
             handleSubmit={handleSubmit}

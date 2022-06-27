@@ -1,7 +1,7 @@
 import React from "react";
 import { Form } from "../Search.styled";
 
-const Moviesearch = ({ searchInput, changeHandler, handleSubmit }) => {
+const MovieSearch = ({ searchInput, changeHandler, handleSubmit }) => {
   return (
     <Form className="form" onSubmit={handleSubmit}>
       <input
@@ -16,4 +16,4 @@ const Moviesearch = ({ searchInput, changeHandler, handleSubmit }) => {
   );
 };
 
-export default Moviesearch;
+export default MovieSearch;

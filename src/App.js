@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
-import Moviesearch from'./components/Moviesearch'
+import Moviesearch from'./components/MovieSearch'
 import BookSeaat from'./components/BookSeaat';
 import ConfirmBook from './components/ConfirmBook';
 
