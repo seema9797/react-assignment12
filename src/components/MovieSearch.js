@@ -1,5 +1,5 @@
 import React from "react";
-import {InputBoxStyle,Form } from "../styles/Search.styled";
+import {InputBoxStyle,Form ,InputIcon} from "../styles/Search.styled";
 
 const MovieSearch = ({ searchInput, changeHandler, handleSubmit }) => {
   return (
@@ -11,7 +11,7 @@ const MovieSearch = ({ searchInput, changeHandler, handleSubmit }) => {
         value={searchInput}
         onChange={changeHandler}
       ></InputBoxStyle>
-      <inputIcon className="fa-solid fa-magnifying-glass"></inputIcon>
+      <InputIcon className="fa-solid fa-magnifying-glass"></InputIcon>
     </Form>
   );
 };

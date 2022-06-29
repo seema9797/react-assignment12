@@ -20,6 +20,7 @@ export const GlobalProvider = (props) => {
   useEffect(() => {
     localStorage.setItem("addMovies", JSON.stringify(state.addMovies));
     localStorage.setItem("addSeats", JSON.stringify(state.addSeats));
+    
   }, [state]);
 
   //actions
@@ -38,13 +39,13 @@ export const GlobalProvider = (props) => {
         type: "ADD_SEATS",
         payload: seatNo,
       });
-        
     }
   };
-    
-    const removeSeats = (id) => {
-        dispatch({ type: "REMOVE_SEATS" ,payload:id});
-    }
+
+  const removeITmes = (id) => {
+    dispatch({ type: "REMOVE_SEATS", payload: id });
+  };
+
 
   return (
     <GlobalContext.Provider
@@ -53,7 +54,8 @@ export const GlobalProvider = (props) => {
         addSeats: state.addSeats,
         addMovieToCardBook,
         addSeatsMul,
-        removeSeats
+        removeITmes,
+      
       }}
     >
       {props.children}

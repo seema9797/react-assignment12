@@ -1,3 +1,4 @@
+
 const reducer= (state, action) => {
   switch (action.type) {
     case "ADD_MOVIE_TO_BOOKCARD":
@@ -18,6 +19,16 @@ const reducer= (state, action) => {
           (seats) => seats.id !== action.payload.id
         ),
       };
+       case "REMOVE_FROM_MODAL":
+      return {
+        ...state,
+        addMovies: state.addMovies.filter((movie) => movie.id !== action.payload),
+        addSeats: state.addSeats.filter((seats) => seats.id !== action.payload)
+      };
+    case "STATE_NULL":
+      return {
+        
+      }
     default:
       return state;
   }

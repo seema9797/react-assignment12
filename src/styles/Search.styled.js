@@ -18,7 +18,7 @@ export const InputBoxStyle = styled.input`
   border: 1px solid #626262;
 `;
 
-export const inputIcon = styled.i`
+export const InputIcon = styled.i`
     position: absolute !important;
     margin-left: 150px !important;
     margin-top: 15px;

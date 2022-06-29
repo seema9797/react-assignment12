@@ -15,10 +15,11 @@ const BookSeaat = () => {
   const [seatbook, setSeatBook] = useState(data);
   const { addSeatsMul, addSeats, removeSeats } = useContext(GlobalContext);
 
-    let storedMovie = addSeats.find((o) => o.id == seatbook.id);
-    
-    const watchlistDesable=storedMovie ?true : false;
-  
+  let storedMovie = addSeats.find((o) => o.id == seatbook.id);
+
+  const watchlistDesable = storedMovie ? true : false;
+ 
+
   return (
     <SeatBook>
       <div className="countSeat">
@@ -30,8 +31,7 @@ const BookSeaat = () => {
           <ul>
             {seatbook.map((seat) => {
               return (
-                <div key={seat.id}
-                  onClick={() => addSeatsMul(seat)}>
+                <div key={seat.id} onClick={() => addSeatsMul(seat)}>
                   {addSeats.some((element) => element.id === seat.id) ? (
                     <BlueSvg />
                   ) : (
@@ -46,6 +46,6 @@ const BookSeaat = () => {
       <ConfirmBook />
     </SeatBook>
   );
-};
+};;
 
 export default BookSeaat;

@@ -5,10 +5,15 @@ import { Link, useLocation } from "react-router-dom";
 const IMG_URL = "https://image.tmdb.org/t/p/w500";
 
 const ConfirmBook = () => {
-  const { addSeats, addMovies,removeSeats } = useContext(GlobalContext);
+  const { addMovies, addSeats, removeITmes } = useContext(GlobalContext);
+
+
+  const modalClose = () => {
+
+  };
   return (
     <SeatBook>
-      <div className="box" onSubmit={() => addSeats}>
+      <div className="box">
         <a className="button" href="#popup1">
           Confirm Booking
         </a>
@@ -16,7 +21,7 @@ const ConfirmBook = () => {
       <div className="countSeat">
         <div id="popup1" className="overlay">
           <div className="popup">
-            <a className="close" href="#">
+            <a className="close" href="1">
               &times;
             </a>
             <div className="bookingHead">
