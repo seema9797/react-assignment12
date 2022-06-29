@@ -27,21 +27,24 @@ export const GlobalProvider = (props) => {
     dispatch({ type: "ADD_MOVIE_TO_BOOKCARD", payload: movies });
   };
   const addSeatsMul = (seatNo) => {
-    //console.log(state.addSeats,"outside if")
     if (
       state.addSeats.some((element) => {
         return element.id === seatNo.id;
       })
     ) {
-      //console.log(state.addSeats, "inside if");
       dispatch({ type: "REMOVE_SEATS", payload: seatNo });
     } else {
       dispatch({
         type: "ADD_SEATS",
         payload: seatNo,
       });
+        
     }
   };
+    
+    const removeSeats = (id) => {
+        dispatch({ type: "REMOVE_SEATS" ,payload:id});
+    }
 
   return (
     <GlobalContext.Provider
@@ -50,7 +53,7 @@ export const GlobalProvider = (props) => {
         addSeats: state.addSeats,
         addMovieToCardBook,
         addSeatsMul,
-        selectedSeats: state.selectedSeats,
+        removeSeats
       }}
     >
       {props.children}

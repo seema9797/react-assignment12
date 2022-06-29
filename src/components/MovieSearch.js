@@ -1,17 +1,17 @@
 import React from "react";
-import { Form } from "../Search.styled";
+import {InputBoxStyle,Form } from "../styles/Search.styled";
 
 const MovieSearch = ({ searchInput, changeHandler, handleSubmit }) => {
   return (
-    <Form className="form" onSubmit={handleSubmit}>
-      <input
+    <Form>
+      <InputBoxStyle
+        onSubmit={handleSubmit}
         type="text"
-        className="inputsearch"
         placeholder="search"
         value={searchInput}
         onChange={changeHandler}
-      />
-      <i className="fa-solid fa-magnifying-glass"></i>
+      ></InputBoxStyle>
+      <inputIcon className="fa-solid fa-magnifying-glass"></inputIcon>
     </Form>
   );
 };

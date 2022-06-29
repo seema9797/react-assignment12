@@ -1,8 +1,9 @@
 import { useEffect, useState, useContext } from 'react';
 import { GlobalContext } from './context/GlobalState';
 import MovieSearch from'./components/MovieSearch'
-import {DisplayImg} from'./Search.styled'
-import { Link } from "react-router-dom";
+import { DisplayImg, Form, BookHeader } from "./styles/Search.styled";
+import { displayimages,sizeImg } from './styles/Card.styed';
+import { Link,useNavigate } from "react-router-dom";
 import NotFond from './images/notfound.png'
 
 
@@ -58,9 +59,9 @@ const Movie = () =>{
     return (
       <div>
         <DisplayImg className="">
-          <div className="BookHeader">
-            <h1>Book Tickets</h1>
-          </div>
+          <BookHeader>
+            Book Tickets
+          </BookHeader>
           <MovieSearch
             changeHandler={changeHandler}
             searchInput={searchInput}
@@ -70,25 +71,25 @@ const Movie = () =>{
           <div className="displayimages">
             {movies.length > 0 ? (
               movies.map((index) => (
-                  <div className="container" key={index.id}>
-                    <div className="cardSub">
-                      <h3 className="movietitle">{index.title}</h3>
-                      <Link to='/bookseat'>
-                        <button
-                          onClick={() => addMovieToCardBook(index)}
-                          className="btnSeeMore"
-                        >
-                          See more
-                        </button>
-                      </Link>
-                    </div>
-                    <img
-                      src={IMG_URL + index.poster_path}
-                      alt={index.title}
-                      id="sizeImg"
-                    />
+                <div className="container" key={index.id}>
+                  <div className="cardSub">
+                    <h3 className="movietitle">{index.title}</h3>
+                    <Link to="/bookseat">
+                      <button
+                        onClick={() => addMovieToCardBook(index)}
+                        className="btnSeeMore"
+                      >
+                        See more
+                      </button>
+                    </Link>
                   </div>
-                ))
+                  <img
+                    src={IMG_URL + index.poster_path}
+                    alt={index.title}
+                    id="sizeImg"
+                  />
+                </div>
+              ))
             ) : (
               <div id="errorCont">
                 <div>

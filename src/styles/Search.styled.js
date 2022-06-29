@@ -5,31 +5,28 @@ display: flex;
 justify-content: center;
 margin: 40px;
 
-.inputsearch{
-    position: relative;
-    width: 250px;
-    height: 50px;
-    padding:0px 10px;
-    border: 1px solid #626262;
-}
-i{
-    position: absolute;
-    margin-left:210px;
-    margin-top:15px;
-    color: #626262
-    
-}
-`
+`;
+export const BookHeader = styled.h1`
+  text-align: center;
+  display: flex;
+  justify-content: center;
+`;
+export const InputBoxStyle = styled.input`
+  width: 250px;
+  height: 50px;
+  padding: 0px 10px;
+  border: 1px solid #626262;
+`;
+
+export const inputIcon = styled.i`
+    position: absolute !important;
+    margin-left: 150px !important;
+    margin-top: 15px;
+    color: #626262;
+`;
+
 export const SeatBook = styled.div`
-  .select-selected {
-    fill: #724fd8;
-  }
-  .seat-default {
-    fill: #d9d9d9;
-  }
-  .seat-desable {
-    fill: #626262;
-  }
+
 
   .seatcontainer {
     display: flex;

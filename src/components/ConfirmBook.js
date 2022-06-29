@@ -1,14 +1,14 @@
 import { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
-import { SeatBook } from "../Search.styled";
+import { SeatBook } from "../styles/Search.styled";
 import { Link, useLocation } from "react-router-dom";
 const IMG_URL = "https://image.tmdb.org/t/p/w500";
 
 const ConfirmBook = () => {
-  const { addSeats, addMovies } = useContext(GlobalContext);
+  const { addSeats, addMovies,removeSeats } = useContext(GlobalContext);
   return (
     <SeatBook>
-      <div className="box">
+      <div className="box" onSubmit={() => addSeats}>
         <a className="button" href="#popup1">
           Confirm Booking
         </a>

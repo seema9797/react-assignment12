@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import { SeatBook } from "../Search.styled";
+import { SeatBook } from "../styles/Search.styled";
 
 const Seats = () => {
 
