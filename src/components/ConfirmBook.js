@@ -1,67 +1,70 @@
-import { useContext } from "react";
+import { useContext,useState } from "react";
 import { GlobalContext } from "../context/GlobalState";
 import { SeatBook } from "../styles/Search.styled";
 import { Link, useLocation } from "react-router-dom";
-const IMG_URL = "https://image.tmdb.org/t/p/w500";
+import {
+  ModelMainContainer,
+  ModelContainer,
+  titleCloseBtn,
+  CardSubContainer,
+  titleCloseButton,
+  Cardimg,
+  HeaderConfirm,
+  NumberOfSeats,
+  MainCountSeat,
+  Seats,
+  MainDivision,
+  DivisionPart,
+  MainDivisionLast,
+  DivisionPartLast
+} from "../styles/Modal.styled";
+const ConfirmBook = ({ selectedSeats, pathImg, closeModel }) => {
+  const [Cancle, setCancel] = useState(false);
+  const IMG_URL = "https://image.tmdb.org/t/p/w500";
 
-const ConfirmBook = () => {
-  const { addMovies, addSeats, removeITmes } = useContext(GlobalContext);
+  //const { addMovies, addSeats, removeITmes } = useContext(GlobalContext);
+  let total = selectedSeats.length * 250;
+  let SGST = (total * 12) / 100;
+  console.log("SGST", SGST);
 
-
-  const modalClose = () => {
-
-  };
   return (
-    <SeatBook>
-      <div className="box">
-        <a className="button" href="#popup1">
-          Confirm Booking
-        </a>
-      </div>
-      <div className="countSeat">
-        <div id="popup1" className="overlay">
-          <div className="popup">
-            <a className="close" href="1">
-              &times;
-            </a>
-            <div className="bookingHead">
-              <div>
-                <h1>Thank You For Booking </h1>
-                <p>Order Summery,</p>
-              </div>
-            </div>
-            <div className="content">
-              <div>
-                {addMovies.length > 0 ? (
-                  <div className="bookshowImg">
-                    {addMovies.map((movie) => (
-                      <img
-                        src={IMG_URL + movie.poster_path}
-                        alt={movie.title}
-                        id="sizeImg"
-                      />
-                    ))}
-                  </div>
-                ) : (
-                  <h2>Please select your Movie</h2>
-                )}
-              </div>
-              {addSeats.length > 0 ? (
-                <div>
-                  {addSeats.map((season) => (
-                    <div className="addSeatId">
-                      <h4>{season.id},</h4>
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <h2>Please select Your Seats</h2>
-              )}
-            </div>
-          </div>
-        </div>
-      </div>
-    </SeatBook>
+    <ModelMainContainer>
+      <ModelContainer>
+        <titleCloseBtn1>
+          <titleCloseButton onClick={closeModel}>x</titleCloseButton>
+        </titleCloseBtn1>
+        <HeaderConfirm>Confirm book</HeaderConfirm>
+        <CardSubContainer>
+          <Cardimg>
+            <img src={IMG_URL + pathImg} alt="error" className="setSizeImg" />
+          </Cardimg>
+          <MainCountSeat>
+            <Seats>Seats:</Seats>
+            <NumberOfSeats>
+              {selectedSeats.map((seatNo) => {
+                return <h1>{seatNo}</h1>;
+              })}{" "}
+            </NumberOfSeats>
+            <MainDivision>
+              <DivisionPart>{selectedSeats.length} * 250:</DivisionPart>
+              <DivisionPart>{total}</DivisionPart>
+            </MainDivision>
+            <MainDivision>
+              <DivisionPart>SGST 12% </DivisionPart>
+              <DivisionPart>{SGST}</DivisionPart>
+            </MainDivision>
+            <MainDivision>
+              <DivisionPart>CGST 12% </DivisionPart>
+              <DivisionPart>{SGST}</DivisionPart>
+            </MainDivision>
+            <MainDivisionLast>
+              <DivisionPartLast>total:</DivisionPartLast>
+              <DivisionPartLast> {total + SGST * 2}</DivisionPartLast>
+            </MainDivisionLast>
+          </MainCountSeat>
+        </CardSubContainer>
+      </ModelContainer>
+    </ModelMainContainer>
   );
 };
 

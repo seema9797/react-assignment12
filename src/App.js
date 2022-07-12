@@ -11,13 +11,13 @@ import {GlobalProvider} from './context/GlobalState'
 function App() {
  
   return (
-  <GlobalProvider>
+ 
 <Router>
       <Switch>
         <Route  path="/ConfirmBook">
            <ConfirmBook />
         </Route>
-       <Route  path="/bookseat">
+       <Route  path="/bookseat/">
            <BookSeaat/>
         </Route>
         <Route  path="/Moviesearch">
@@ -28,7 +28,6 @@ function App() {
         </Route>
       </Switch>
     </Router>
-  </GlobalProvider>
 
   );
 }

@@ -2,202 +2,202 @@ import WhiteSeat from "./images/Seat.svg"
 
 export const data =[
     {
-        id:"C1",
+        id:"A1",
         images:WhiteSeat,
         price:220
     },
 {
-    id:"C2",
+    id:"A2",
     images:WhiteSeat,
     price:220
 },
 {
-    id:"C3",
+    id:"A3",
     images:WhiteSeat,
     price:220
 },
 {
-    id:"C4",
+    id:"A4",
     images:WhiteSeat,
     price:220
 },
 {
-    id:"C5",
+    id:"A5",
     images:WhiteSeat,
     price:220
 },
 {
-    id:"C6",
+    id:"A6",
     images:WhiteSeat,
     price:220
 },
 {
-    id:"C7",
+    id:"A7",
     images:WhiteSeat,
     price:220
 },
 {
-    id:"C8",
+    id:"A8",
     images:WhiteSeat,
     price:220
 },
 {
-    id:"C9",
+    id:"A9",
     images:WhiteSeat,
     price:220
 },
 {
-    id:"C10",
+    id:"A10",
     images:WhiteSeat,
     price:220
 },
 {
-    id:"C11",
+    id:"B1",
     images:WhiteSeat,
     price:220
 },
 {
-id:"C12",
+id:"B2",
 images:WhiteSeat,
 price:220
 },
 {
-id:"C13",
+id:"B3",
 images:WhiteSeat,
 price:220
 },
 {
-id:"C14",
+id:"B4",
 images:WhiteSeat,
 price:220
 },
 {
-id:"C15",
+id:"B5",
 images:WhiteSeat,
 price:220
 },
 {
-id:"C16",
+id:"B6",
 images:WhiteSeat,
 price:220
 },
 {
-id:"C17",
+id:"B7",
 images:WhiteSeat,
 price:220
 },
 {
-id:"C18",
+id:"B8",
 images:WhiteSeat,
 price:220
 },
 {
-id:"C19",
+id:"B9",
 images:WhiteSeat,
 price:220
 },
 {
-id:"C20",
+id:"B10",
 images:WhiteSeat,
 price:220
 },
 {
-    id:"C21",
+    id:"C1",
     images:WhiteSeat,
     price:220
 },
 {
-id:"C22",
+id:"C2",
 images:WhiteSeat,
 price:220
 },
 {
-id:"C23",
+id:"C3",
 images:WhiteSeat,
 price:220
 },
 {
-id:"C24",
+id:"C4",
 images:WhiteSeat,
 price:220
 },
 {
-id:"C25",
+id:"C5",
 images:WhiteSeat,
 price:220
 },
 {
-id:"C26",
+id:"C6",
 images:WhiteSeat,
 price:220
 },
 {
-id:"C27",
+id:"C7",
 images:WhiteSeat,
 price:220
 },
 {
-id:"C28",
+id:"C8",
 images:WhiteSeat,
 price:220
 },
 {
-id:"C29",
+id:"C9",
 images:WhiteSeat,
 price:220
 },
 {
-id:"C30",
+id:"C10",
 images:WhiteSeat,
 price:220
 },
 {
-    id:"C31",
+    id:"D1",
     images:WhiteSeat,
     price:220
 },
 {
-id:"C32",
+id:"D2",
 images:WhiteSeat,
 price:220
 },
 {
-id:"C33",
+id:"D3",
 images:WhiteSeat,
 price:220
 },
 {
-id:"C34",
+id:"D4",
 images:WhiteSeat,
 price:220
 },
 {
-id:"C35",
+id:"D5",
 images:WhiteSeat,
 price:220
 },
 {
-id:"C36",
+id:"D6",
 images:WhiteSeat,
 price:220
 },
 {
-id:"C37",
+id:"D7",
 images:WhiteSeat,
 price:220
 },
 {
-id:"C38",
+id:"D8",
 images:WhiteSeat,
 price:220
 },
 {
-id:"C39",
+id:"D9",
 images:WhiteSeat,
 price:220
 },
 {
-id:"C40",
+id:"D10",
 images:WhiteSeat,
 price:220
 },

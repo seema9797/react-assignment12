@@ -1,9 +1,18 @@
-import { useEffect, useState, useContext } from 'react';
-import { GlobalContext } from './context/GlobalState';
+import { useEffect, useState } from 'react';
 import MovieSearch from'./components/MovieSearch'
-import { DisplayImg, Form, BookHeader } from "./styles/Search.styled";
-import { displayimages,sizeImg } from './styles/Card.styed';
-import { Link,useNavigate } from "react-router-dom";
+import {
+  HeaderMovie,
+  DisplayImages,
+  SubMainCard,
+  ButtonShowMore,
+  MovieTitle,
+  SubContain,
+} from "./styles/Card.styed";
+import{  ErrorCont,
+  ErrorMsg,
+  MainErrorDiv,
+  ErrorImg,}from "./styles/ErrorFound.styed"
+import { useHistory } from "react-router-dom";
 import NotFond from './images/notfound.png'
 
 
@@ -20,8 +29,8 @@ const API_SEARCH ="https://api.themoviedb.org/3/search/movie?api_key=16f5a397146
 const Movie = () => {
   const [movies, setMovies] = useState([]);
   const [searchInput, setSearchInput] = useState("");
-  const { addMovieToCardBook } = useContext(GlobalContext);
-
+  const history = useHistory();
+  
   useEffect(() => {
     fetch(API_URL)
       .then((res) => res.json())
@@ -53,49 +62,52 @@ const Movie = () => {
   const changeHandler = (e) => {
     setSearchInput(e.target.value);
   };
-
+  const Routs = (id, path) => {
+    history.push({
+      pathname: "/bookseat",
+      state: {movieId: id,moviePath: path},
+    });
+    console.log(path,id)
+  }
   return (
     <div>
-      <DisplayImg className="">
-        <BookHeader>Book Tickets</BookHeader>
-        <MovieSearch
-          changeHandler={changeHandler}
-          searchInput={searchInput}
-          handleSubmit={handleSubmit}
-        />
+      <HeaderMovie>Book Tickets</HeaderMovie>
+      <MovieSearch
+        changeHandler={changeHandler}
+        searchInput={searchInput}
+        handleSubmit={handleSubmit}
+      />
 
-        <div className="displayimages">
-          {movies.length > 0 ? (
-            movies.map((index) => (
-              <div className="container" key={index.id}>
-                <div className="cardSub">
-                  <h3 className="movietitle">{index.title}</h3>
-                  <Link to="/bookseat">
-                    <button
-                      onClick={() => addMovieToCardBook(index)}
-                      className="btnSeeMore"
-                    >
-                      See more
-                    </button>
-                  </Link>
-                </div>
-                <img
-                  src={IMG_URL + index.poster_path}
-                  alt={index.title}
-                  id="sizeImg"
-                />
-              </div>
-            ))
-          ) : (
-            <div id="errorCont">
-              <div>
-                <h2>Sorry !! No Movies Found </h2>
-                <img src={NotFond} alt="error" />
-              </div>
+      <DisplayImages>
+        {movies.length > 0 ? (
+          movies.map((index) => (
+            <div key={index.id}>
+              <SubContain>
+                <MovieTitle>{index.title}</MovieTitle>
+                <ButtonShowMore
+                  onClick={() => Routs(index.id, index.poster_path)}
+                >
+                  See more
+                </ButtonShowMore>
+              </SubContain>
+              <img
+                className="SizingImg"
+                src={IMG_URL + index.poster_path}
+                alt="error"
+              />
             </div>
-          )}
-        </div>
-      </DisplayImg>
+          ))
+        ) : (
+          <ErrorCont>
+            <MainErrorDiv>
+              <ErrorMsg>
+                Sorry, there is no result for keyword you searched.
+              </ErrorMsg>
+              <ErrorImg src={NotFond} alt="error" />
+            </MainErrorDiv>
+          </ErrorCont>
+        )}
+      </DisplayImages>
     </div>
   );
 };
