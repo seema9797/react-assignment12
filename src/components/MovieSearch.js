@@ -3,9 +3,8 @@ import {InputBoxStyle,Form ,InputIcon} from "../styles/Search.styled";
 
 const MovieSearch = ({ searchInput, changeHandler, handleSubmit }) => {
   return (
-    <Form>
+    <Form onSubmit={handleSubmit}>
       <InputBoxStyle
-        onSubmit={handleSubmit}
         type="text"
         placeholder="search"
         value={searchInput}

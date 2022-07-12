@@ -61,7 +61,7 @@ export const HeaderConfirm = styled.h1`
     margin-left:200px
 `;
 export const MainCountSeat = styled.div`
-margin-left:100px;
+margin-right:100px;
 line-height:10px
 `
 export const NumberOfSeats = styled.p`
@@ -69,7 +69,8 @@ display:flex;
 justify-content:space-between
 `
 export const CardSubContainer = styled.div`
-display:flex
+display:flex;
+justify-content:space-between
 `;
 
 export const Cardimg = styled.div`

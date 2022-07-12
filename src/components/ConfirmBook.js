@@ -21,8 +21,6 @@ import {
 const ConfirmBook = ({ selectedSeats, pathImg, closeModel }) => {
   const [Cancle, setCancel] = useState(false);
   const IMG_URL = "https://image.tmdb.org/t/p/w500";
-
-  //const { addMovies, addSeats, removeITmes } = useContext(GlobalContext);
   let total = selectedSeats.length * 250;
   let SGST = (total * 12) / 100;
   console.log("SGST", SGST);

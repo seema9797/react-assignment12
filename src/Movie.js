@@ -36,7 +36,6 @@ const Movie = () => {
       .then((res) => res.json())
       .then((data) => {
         setMovies(data.results);
-        console.log(data.results);
       });
   }, []);
 
@@ -48,6 +47,7 @@ const Movie = () => {
         .then((res) => res.json())
         .then((data) => {
           setMovies(data.results);
+          console.log(data.results)
         });
     } else {
       fetch(API_URL)
