@@ -43,14 +43,14 @@ export const ModelContainer = styled.div`
   padding: 25px;
   z-index:2;
 `;
-export const titleCloseBtn = styled.div`
+export const TitleCloseBtn = styled.div`
 display:flex;
-flex-direction:flex-end;
+flex-direction:row-reverse;
 `
 export const Seats = styled.h3`
 color:black
 `
-export const titleCloseButton = styled.button`
+export const TitleCloseButton = styled.button`
   background-color: transparent;
   border: none;
   font-size: 25px;

@@ -33,12 +33,6 @@ export const countSeat = styled.div`
   margin-top: 40px;
 `;
 
-export const UnorderSeatList = styled.ul`
-  display: grid;
-  list-style: none;
-  grid-template-columns: repeat(10, minmax(10px, 1fr));
-  grid-gap: 20px;
-`;
 export const ListSeats = styled.li`
 list-style-type: none;
 `
@@ -49,7 +43,15 @@ justify-content: center;
 export const seatContainer = styled.div`
 display:flex;
 `
-
+export const seatContainerUl = styled.ul`
+  display: grid;
+  list-style: none;
+  grid-template-columns: repeat(10, minmax(10px, 1fr));
+  grid-gap: 20px;
+`;
+export const seatContainerli = styled.li`
+  text-decoration: none;
+`;
 export const SeatBook = styled.div`
   .seatcontainer {
     display: flex;

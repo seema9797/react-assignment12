@@ -1,6 +1,6 @@
 import { useEffect, useState, useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
-import { SeatBook, } from "../styles/Search.styled";
+import { SeatBook, SeatContainer } from "../styles/Search.styled";
 import { ConfirmBtn, MainBtn } from "../styles/Modal.styled";
 import { useParams,useLocation } from "react-router-dom";
 import ConfirmBook from "./ConfirmBook";

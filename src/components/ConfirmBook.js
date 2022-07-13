@@ -1,13 +1,11 @@
-import { useContext,useState } from "react";
-import { GlobalContext } from "../context/GlobalState";
-import { SeatBook } from "../styles/Search.styled";
-import { Link, useLocation } from "react-router-dom";
+import {useState } from "react";
+
 import {
   ModelMainContainer,
   ModelContainer,
-  titleCloseBtn,
+  TitleCloseBtn,
   CardSubContainer,
-  titleCloseButton,
+  TitleCloseButton,
   Cardimg,
   HeaderConfirm,
   NumberOfSeats,
@@ -28,9 +26,9 @@ const ConfirmBook = ({ selectedSeats, pathImg, closeModel }) => {
   return (
     <ModelMainContainer>
       <ModelContainer>
-        <titleCloseBtn1>
-          <titleCloseButton onClick={closeModel}>x</titleCloseButton>
-        </titleCloseBtn1>
+        <TitleCloseBtn>
+          <TitleCloseButton onClick={closeModel}>x</TitleCloseButton>
+        </TitleCloseBtn>
         <HeaderConfirm>Confirm book</HeaderConfirm>
         <CardSubContainer>
           <Cardimg>
