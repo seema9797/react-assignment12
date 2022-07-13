@@ -7,6 +7,7 @@ import {
   ButtonShowMore,
   MovieTitle,
   SubContain,
+  SizingImg,
 } from "./styles/Card.styed";
 import{  ErrorCont,
   ErrorMsg,
@@ -90,8 +91,7 @@ const Movie = () => {
                   See more
                 </ButtonShowMore>
               </SubContain>
-              <img
-                className="SizingImg"
+              <SizingImg
                 src={IMG_URL + index.poster_path}
                 alt="error"
               />
