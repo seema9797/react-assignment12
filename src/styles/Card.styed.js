@@ -11,11 +11,15 @@ export const HeaderMovie = styled.h1`
 
 export const DisplayImages = styled.div`
   width: 80%;
-  margin: 50px 140px auto;
+  margin: 50px 170px auto;
+  justify-content: center;
   display: grid;
   text-align: center;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-gap: 60px;
+  @media screen and (max-width: 800px) {
+    margin: 50px 70px auto;
+  }
 `;
 
 export const SizingImg = styled.img`
@@ -27,8 +31,7 @@ export const SizingImg = styled.img`
   height: 374px;
   border-radius: 20px;
   cursor: pointer;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.25);
 
   &:hover {
     background: rgba(98, 98, 98, 0.6);
