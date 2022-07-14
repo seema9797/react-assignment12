@@ -14,5 +14,8 @@ export const MainErrorDiv = styled.div`
 align-items:center;
 `
 export const ErrorImg = styled.img`
-justify-content: center;
-`
+  justify-content: center;
+  justify-content: center;
+  width: 620px;
+  height: 447px;
+`;

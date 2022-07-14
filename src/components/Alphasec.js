@@ -1,16 +1,16 @@
 import React from 'react'
-
+import { numberCount } from "../styles/CountDesign.styed";
 const Alphasec = () => {
   return (
-    <div className="numberCount">
-         <ul>
-            <li>A</li>
-                <li>B</li>
-                <li>C</li>
-                <li>D</li>
-            </ul>
-    </div>
-  )
+    <numberCount>
+      <ul>
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+        <li>D</li>
+      </ul>
+    </numberCount>
+  );
 }
 
 export default Alphasec

@@ -6,7 +6,7 @@ import {
   TitleCloseBtn,
   CardSubContainer,
   TitleCloseButton,
-  Cardimg,
+  CardImg,
   HeaderConfirm,
   NumberOfSeats,
   MainCountSeat,
@@ -14,10 +14,10 @@ import {
   MainDivision,
   DivisionPart,
   MainDivisionLast,
-  DivisionPartLast
+  DivisionPartLast,
+  DivisionPartHead,
 } from "../styles/Modal.styled";
 const ConfirmBook = ({ selectedSeats, pathImg, closeModel }) => {
-  const [Cancle, setCancel] = useState(false);
   const IMG_URL = "https://image.tmdb.org/t/p/w500";
   let total = selectedSeats.length * 250;
   let SGST = (total * 12) / 100;
@@ -31,9 +31,9 @@ const ConfirmBook = ({ selectedSeats, pathImg, closeModel }) => {
         </TitleCloseBtn>
         <HeaderConfirm>Confirm book</HeaderConfirm>
         <CardSubContainer>
-          <Cardimg>
+          <CardImg>
             <img src={IMG_URL + pathImg} alt="error" className="setSizeImg" />
-          </Cardimg>
+          </CardImg>
           <MainCountSeat>
             <Seats>Seats:</Seats>
             <NumberOfSeats>
@@ -42,8 +42,8 @@ const ConfirmBook = ({ selectedSeats, pathImg, closeModel }) => {
               })}{" "}
             </NumberOfSeats>
             <MainDivision>
-              <DivisionPart>{selectedSeats.length} * 250:</DivisionPart>
-              <DivisionPart>{total}</DivisionPart>
+              <DivisionPartHead>{selectedSeats.length} * 250:</DivisionPartHead>
+              <DivisionPartHead>{total}</DivisionPartHead>
             </MainDivision>
             <MainDivision>
               <DivisionPart>SGST 12% </DivisionPart>

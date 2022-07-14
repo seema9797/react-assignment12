@@ -57,6 +57,7 @@ export const SubMainCard = styled.div`
 export const SubContain = styled.div`
   justify-content: "center";
   align-items: "center";
+  display:none
 `;
 export const ButtonShowMore = styled.button`
   position: absolute;
@@ -106,9 +107,9 @@ export const containerMain = styled.div`
   justify-content: center;
   text-align: center;
   align-items: center;
-   &:hover > ${cardSub} {
+  &:hover > ${SubContain} {
     display: block;
-  } 
+  }
 `;
 export const btnSeeMore = styled.button`
   position: absolute;
